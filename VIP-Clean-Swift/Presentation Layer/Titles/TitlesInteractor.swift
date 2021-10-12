@@ -19,7 +19,7 @@ protocol TitlesInteractor: AnyObject {
 class TitlesInteractorImplementation: TitlesInteractor {
     var presenter: TitlesPresenter?
     
-    private let titlesService: TitlesServiceImplementation()
+    private let titlesService = TitlesServiceImplementation()
     private var titles: [Title] = []
     
     func viewDidLoad() {
@@ -28,13 +28,23 @@ class TitlesInteractorImplementation: TitlesInteractor {
             
             presenter?.interactor(didRetrieveTitles: self.titles)
         } catch {
-            presenter?.interactor(didFailRetrieveTitles: error)
+            presenter?.interactor(didFailtRetrieveTitles: error)
+        }
+    }
+    
+    func addTapped(with text: String) {
+        do {
+            let title = try titlesService.addTitle(text: text)
+            self.titles.append(title)
+            presenter?.interactor(didAddTitle: title)
+        } catch {
+            presenter?.interactor(didFailAddTitle: error)
         }
     }
     
     func didCommitDelete(for index: Int) {
         do {
-            try titlesService.deleteTitle(with: self.titles[index].id!)
+            try titlesService.deleteTitle(with: self.titles[index].id)
             self.titles.remove(at: index)
             presenter?.interactor(didDeleteTitleAtIndex: index)
         } catch {

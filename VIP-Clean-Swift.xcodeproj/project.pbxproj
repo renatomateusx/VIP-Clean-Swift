@@ -18,6 +18,9 @@
 		7CF081C227161E4700554D88 /* TitlesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081C127161E4700554D88 /* TitlesPresenter.swift */; };
 		7CF081C427161E4E00554D88 /* TitlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081C327161E4E00554D88 /* TitlesRouter.swift */; };
 		7CF081C627161E5E00554D88 /* TitlesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081C527161E5E00554D88 /* TitlesConfigurator.swift */; };
+		7CF081C927163A2900554D88 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081C827163A2900554D88 /* UIViewController+Extensions.swift */; };
+		7CF081CC2716466D00554D88 /* TitlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081CB2716466D00554D88 /* TitlesService.swift */; };
+		7CF081CF2716470400554D88 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF081CE2716470400554D88 /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		7CF081C127161E4700554D88 /* TitlesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesPresenter.swift; sourceTree = "<group>"; };
 		7CF081C327161E4E00554D88 /* TitlesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesRouter.swift; sourceTree = "<group>"; };
 		7CF081C527161E5E00554D88 /* TitlesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesConfigurator.swift; sourceTree = "<group>"; };
+		7CF081C827163A2900554D88 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		7CF081CB2716466D00554D88 /* TitlesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesService.swift; sourceTree = "<group>"; };
+		7CF081CE2716470400554D88 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 			children = (
 				7CF081B727161D8500554D88 /* Application Layer */,
 				7CF081B827161D9100554D88 /* Presentation Layer */,
+				7CF081CA2716465D00554D88 /* BusinessLogicLayer */,
+				7CF081C727163A1700554D88 /* SupportinFiles */,
 				7CF0819527161C5D00554D88 /* Info.plist */,
 			);
 			path = "VIP-Clean-Swift";
@@ -167,6 +175,31 @@
 				7CF081C527161E5E00554D88 /* TitlesConfigurator.swift */,
 			);
 			path = Titles;
+			sourceTree = "<group>";
+		};
+		7CF081C727163A1700554D88 /* SupportinFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7CF081C827163A2900554D88 /* UIViewController+Extensions.swift */,
+			);
+			path = SupportinFiles;
+			sourceTree = "<group>";
+		};
+		7CF081CA2716465D00554D88 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7CF081CD271646FE00554D88 /* Models */,
+				7CF081CB2716466D00554D88 /* TitlesService.swift */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		7CF081CD271646FE00554D88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CF081CE2716470400554D88 /* Title.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +331,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF081CF2716470400554D88 /* Title.swift in Sources */,
 				7CF081C427161E4E00554D88 /* TitlesRouter.swift in Sources */,
 				7CF081BE27161E3400554D88 /* TitlesViewController.swift in Sources */,
 				7CF0818827161C5A00554D88 /* AppDelegate.swift in Sources */,
 				7CF081BC27161E2900554D88 /* TitlesView.swift in Sources */,
+				7CF081C927163A2900554D88 /* UIViewController+Extensions.swift in Sources */,
+				7CF081CC2716466D00554D88 /* TitlesService.swift in Sources */,
 				7CF081C627161E5E00554D88 /* TitlesConfigurator.swift in Sources */,
 				7CF081C027161E3E00554D88 /* TitlesInteractor.swift in Sources */,
 				7CF081C227161E4700554D88 /* TitlesPresenter.swift in Sources */,

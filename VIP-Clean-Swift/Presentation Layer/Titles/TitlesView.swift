@@ -12,9 +12,11 @@ class TitlesView: UIView {
     // MARK: - Properties
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .white
         tableView.rowHeight = 70
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     
@@ -31,6 +33,8 @@ class TitlesView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupUI()
     }
     
     required init?(coder: NSCoder) {

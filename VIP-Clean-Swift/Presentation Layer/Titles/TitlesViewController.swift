@@ -17,7 +17,7 @@ protocol TitlesPresenterOutput: AnyObject {
     func presenter(didDeleteItemAt index: Int)
     func presenter(didFailDeleteItemAtIndex index: Int, message: String)
     
-    func presenter(didObtainItemId id: String)
+    func presenter(didObtainItemId id: Int)
     func presenter(didFailObtainItemId message: String)
 }
 
@@ -124,8 +124,8 @@ extension TitlesViewController: TitlesPresenterOutput {
         showError(with: message)
     }
     
-    func presenter(didObtainItemId id: String) {
-        self.router.routeToDetail(with: id)
+    func presenter(didObtainItemId id: Int) {
+        self.router?.routeToDetail(with: id)
     }
     
     func presenter(didFailObtainItemId message: String) {
@@ -165,13 +165,5 @@ extension TitlesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.interactor?.didSelectRow(at: indexPath.row)
-    }
-}
-
-// MARK: - Error
-
-extension TitlesViewController {
-    func showError(with message: String) {
-        print(message)
     }
 }
