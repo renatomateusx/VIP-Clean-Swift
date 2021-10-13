@@ -8,4 +8,4 @@ that pattern is unidirectional. You can see image below.<br/>
 
 # Folder Structure
 In this project I used the below folder structure. If you pay attention you can add the business logical with ViewModel. But you must keep the unidirectional path. Therefore you'll add on more layer.<br/>
-<img src="https://github.com/renatomateusx/VIP-Clean-Swift/blob/master/folderStructure.png" title="VIP Clean Swift">
+<img src="https://github.com/renatomateusx/VIP-Clean-Swift/blob/master/folderStructureUpdated.png" title="VIP Clean Swift">
